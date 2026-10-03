@@ -3,7 +3,7 @@
   "sessions": [
     {
       "id": "hackamrhein-team-bootstrap-2026-10-03",
-      "kind": "build",
+      "kind": "kickoff",
       "label": "The Sponge Squad team repository bootstrap",
       "at": "2026-10-03T10:43:00+02:00",
       "recorded": true,
@@ -24,7 +24,11 @@
       "confirmed_by": "project owner",
       "confirmed_at": "2026-10-03T10:43:00+02:00",
       "text": "Use the repository as shared team memory so parallel AI-assisted execution does not replace collaboration.",
-      "areas": ["README.md", ".observstory/", "docs/"]
+      "areas": [
+        "README.md",
+        ".observstory/",
+        "docs/"
+      ]
     },
     {
       "id": "D2",
@@ -32,7 +36,13 @@
       "confirmed_by": "project owner",
       "confirmed_at": "2026-10-03T10:43:00+02:00",
       "text": "Separate problem framing, evidence, experiments, implementation and pitch so a polished build cannot silently substitute for validation.",
-      "areas": ["problem/", "data/", "experiments/", "src/", "pitch/"]
+      "areas": [
+        "problem/",
+        "data/",
+        "experiments/",
+        "src/",
+        "pitch/"
+      ]
     },
     {
       "id": "D3",
@@ -40,7 +50,10 @@
       "confirmed_by": "project owner",
       "confirmed_at": "2026-10-03T10:43:00+02:00",
       "text": "Treat provenance and dataset fitness as first-class evidence; abstaining from an unsupported conclusion is a valid result.",
-      "areas": ["data/", "experiments/"]
+      "areas": [
+        "data/",
+        "experiments/"
+      ]
     }
   ]
 }
