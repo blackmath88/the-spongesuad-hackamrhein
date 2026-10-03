@@ -36,6 +36,22 @@ Use the repository to make the collisions visible.
 
 These folders can evolve with the project. Observstory treats them as semantic lanes rather than bureaucracy.
 
+## Research & resources
+
+The repository now has a **challenge-neutral research library** so useful findings do not become attached to one person's preferred concept too early.
+
+Start here:
+
+- [`docs/README.md`](docs/README.md) — research index and status conventions
+- [`docs/CHALLENGE_LANDSCAPE.md`](docs/CHALLENGE_LANDSCAPE.md) — neutral notes across Life Sciences, Sponge City, Basel at 38° and Rhine
+- [`docs/DATA_AND_SOURCES.md`](docs/DATA_AND_SOURCES.md) — official data, APIs and source-fitness notes
+- [`docs/TECHNICAL_PATTERNS.md`](docs/TECHNICAL_PATTERNS.md) — rules, graphs, provenance, STAC/spatial patterns and replay
+- [`docs/RESEARCH_BACKLOG.md`](docs/RESEARCH_BACKLOG.md) — unresolved questions worth investigating
+- [`docs/RESEARCH_METHOD.md`](docs/RESEARCH_METHOD.md) — how to distinguish verified facts, interpretations and leads
+- [`resources/catalog.yml`](resources/catalog.yml) — machine-readable resource/link inventory
+
+Research is not a team decision. A useful technical pattern or dataset belongs here even if we never use it in the final build.
+
 ## Observstory
 
 This repository is wired to [Observstory](https://github.com/blackmath88/observstory), a shared situational-awareness layer for fast parallel work.
