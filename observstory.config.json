@@ -1,0 +1,56 @@
+{
+  "title": "The Sponge Squad · Hack am Rhein 2026",
+  "window_hours": 36,
+  "lanes": [
+    {
+      "id": "frame",
+      "label": "Problem",
+      "description": "Challenge framing, users, broken decisions, assumptions and team intent",
+      "paths": ["README.md", "problem/", "docs/decisions/", ".observstory/", "observstory.config.json"]
+    },
+    {
+      "id": "evidence",
+      "label": "Data + Evidence",
+      "description": "Sources, provenance, dataset fitness, analysis and evidence for or against the idea",
+      "paths": ["data/", "experiments/data/", "docs/evidence/"]
+    },
+    {
+      "id": "build",
+      "label": "Prototype",
+      "description": "Product implementation and the end-to-end demo path",
+      "paths": ["src/", "app/", "web/", "api/", "prototype/"]
+    },
+    {
+      "id": "verify",
+      "label": "Experiments",
+      "description": "Spikes, validation, evaluation, rejected approaches and explicit tests of assumptions",
+      "paths": ["experiments/", "tests/", "evals/"]
+    },
+    {
+      "id": "story",
+      "label": "Demo + Pitch",
+      "description": "Narrative, screenshots, demo script, final presentation and delivery material",
+      "paths": ["pitch/", "demo/", "docs/demo/"]
+    },
+    {
+      "id": "ops",
+      "label": "Project Ops",
+      "description": "Automation, CI and repository coordination",
+      "paths": [".github/", "scripts/"]
+    }
+  ],
+  "signals": {
+    "overlap_min_work_items": 2,
+    "stale_hours": 6,
+    "burst_min_commits": 6,
+    "burst_window_minutes": 30
+  },
+  "ignore": ["/observstory/", "*.png", "*.jpg", "*.jpeg", "*.gif", "*.webp"],
+  "containers": ["problem", "data", "src", "app", "web", "api", "prototype", "experiments", "tests", "evals", "docs", "pitch", "demo"],
+  "area_depth": 2,
+  "max_commits": 160,
+  "max_pull_requests": 60,
+  "max_open_pull_requests": 40,
+  "max_branches": 40,
+  "max_issues": 100
+}
