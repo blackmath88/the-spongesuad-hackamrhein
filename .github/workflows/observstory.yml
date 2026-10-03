@@ -35,18 +35,17 @@ jobs:
           coordination: .observstory/coordination.json
           output: observstory
 
-      - name: Assemble weekend cockpit
+      - name: Assemble repository-owned Observatory projection
         run: |
           mv observstory/index.html observstory/project-map.html
-          cp cockpit/index.html observstory/index.html
-          cp planning/weekend.json observstory/data/weekend.json
+          cp observatory/site/index.html observstory/index.html
+          cp observatory/data/weekend.json observstory/data/weekend.json
 
       - name: Hackathon pulse
         run: |
           python3 - <<'PY'
           import json
-          p = "observstory/data/snapshot.json"
-          s = json.load(open(p))
+          s = json.load(open("observstory/data/snapshot.json"))
           print("Repository:", s["repository"]["full_name"])
           print("In flight:", s["summary"]["in_flight"])
           print("Active areas:", s["summary"]["areas_active"])
@@ -68,6 +67,7 @@ jobs:
           path: observstory
 
   deploy:
+    if: github.ref == 'refs/heads/main'
     needs: observatory
     runs-on: ubuntu-latest
     environment:
