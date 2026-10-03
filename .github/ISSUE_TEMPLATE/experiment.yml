@@ -1,0 +1,23 @@
+name: Experiment
+description: Test an assumption before investing more build time
+title: "[EXPERIMENT] "
+body:
+  - type: textarea
+    id: hypothesis
+    attributes:
+      label: Hypothesis
+      description: What do we currently believe?
+    validations:
+      required: true
+  - type: textarea
+    id: test
+    attributes:
+      label: Cheapest useful test
+      description: What is the smallest thing that could change our mind?
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Result / evidence
+      description: Fill this in when the experiment is complete.
