@@ -1,0 +1,26 @@
+name: Hackathon task
+description: A concrete shared piece of work for the weekend
+title: "[TASK] "
+body:
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Outcome
+      description: What observable result should exist when this is done?
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why now?
+      description: Which current question, risk, demo need or dependency does this serve?
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence / acceptance
+      description: How will we know this is actually good enough?
+  - type: input
+    id: area
+    attributes:
+      label: Repo area
+      placeholder: e.g. data/, src/map/, pitch/
