@@ -32,7 +32,7 @@ Use the repository to make the collisions visible.
 - `experiments/` — cheap tests, spikes, rejected ideas, evaluation evidence
 - `docs/` — architecture, decisions, notes, handoffs
 - `pitch/` — demo flow, narrative, screenshots, final presentation material
-- `.observstory/` — declared coordination state for the team
+- `observatory/` — repository-native observatory, day plan and task-planning documentation\n- `.observstory/` — declared coordination state for the team
 
 These folders can evolve with the project. Observstory treats them as semantic lanes rather than bureaucracy.
 
@@ -51,6 +51,10 @@ Start here:
 - [`resources/catalog.yml`](resources/catalog.yml) — machine-readable resource/link inventory
 
 Research is not a team decision. A useful technical pattern or dataset belongs here even if we never use it in the final build.
+
+## Observatory
+
+Start with [`observatory/README.md`](observatory/README.md). The Observatory is a first-class repository module containing the weekend plan, task-planning conventions and the source for the Pages cockpit. Pages is only a projection of repository-owned state.
 
 ## Observstory
 
