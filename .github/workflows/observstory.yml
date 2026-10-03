@@ -5,7 +5,7 @@ on:
   pull_request:
     types: [opened, synchronize, reopened, closed, ready_for_review, converted_to_draft]
   issues:
-    types: [opened, closed, reopened]
+    types: [opened, closed, reopened, edited, assigned, unassigned]
   workflow_dispatch:
   schedule:
     - cron: "17 * * * *"
@@ -14,6 +14,8 @@ permissions:
   contents: read
   pull-requests: read
   issues: read
+  pages: write
+  id-token: write
 
 concurrency:
   group: observstory
@@ -32,6 +34,12 @@ jobs:
           config: observstory.config.json
           coordination: .observstory/coordination.json
           output: observstory
+
+      - name: Assemble weekend cockpit
+        run: |
+          mv observstory/index.html observstory/project-map.html
+          cp cockpit/index.html observstory/index.html
+          cp planning/weekend.json observstory/data/weekend.json
 
       - name: Hackathon pulse
         run: |
@@ -52,3 +60,20 @@ jobs:
           name: sponge-squad-observatory
           path: observstory
           retention-days: 7
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: observstory
+
+  deploy:
+    needs: observatory
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
